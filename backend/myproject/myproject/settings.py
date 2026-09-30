@@ -32,7 +32,6 @@ ALLOWED_HOSTS = [
     "localhost",
     "127.0.0.1",
     "vercel.app",
-    "https://new-todo-3tzc7hpxn-amisha-pal.vercel.app",
 ]
 
 
