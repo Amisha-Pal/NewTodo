@@ -12,7 +12,7 @@ function App() {
   // Django se tasks fetch karna
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/todos/")
+      .get("https://new-todo-dun.vercel.app/api/todos/")
       .then((response) => {
         setTasks(response.data);
       })
@@ -24,7 +24,7 @@ function App() {
   // Add Task
   const addTask = (title) => {
     axios
-      .post("http://127.0.0.1:8000/api/todos/", {
+      .post("https://new-todo-dun.vercel.app/api/todos/", {
         title: title,
       })
       .then((response) => {
@@ -41,7 +41,7 @@ function App() {
   // Delete Task
   const deleteTask = (id) => {
     axios
-      .delete(`http://127.0.0.1:8000/api/todos/${id}/`)
+      .delete(`https://new-todo-dun.vercel.app/api/todos/${id}/`)
       .then(() => {
         setTasks((previousTasks) =>
           previousTasks.filter(
@@ -57,7 +57,7 @@ function App() {
   // Edit Task
   const editTask = (id, newTitle) => {
     axios
-      .patch(`http://127.0.0.1:8000/api/todos/${id}/`, {
+      .patch(`https://new-todo-dun.vercel.app/api/todos/${id}/`, {
         title: newTitle,
       })
       .then((response) => {
