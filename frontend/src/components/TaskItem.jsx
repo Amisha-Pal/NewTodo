@@ -55,7 +55,7 @@ function TaskItem({ task, onDeleteTask, onEditTask }) {
             <h3>{task.title}</h3>
 
             <p>
-              Created: {task.created_at}
+              Created: {task.created_at.split("T")[0]}
             </p>
           </div>
 
